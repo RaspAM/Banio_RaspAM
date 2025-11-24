@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Mersin Healing Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 25px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    header h1 { margin: 0; font-size: 1.6em; }
+    .lang-switch {
+      margin-top: 10px;
+    }
+    .lang-btn {
+      background: #fff;
+      color: #2e7d32;
+      border: 1px solid #2e7d32;
+      border-radius: 20px;
+      padding: 5px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .hero {
+      background: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/Mersin_coast.jpg") center/cover no-repeat;
+      height: 180px;
+    }
+    .content { padding: 20px; max-width: 600px; margin: auto; line-height: 1.6; }
+    .buttons {
+      position: fixed; bottom: 0; width: 100%;
+      background: #fff; padding: 10px;
+      border-top: 1px solid #ccc;
+      display: flex; justify-content: space-around;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background: #43a047; color: white;
+      padding: 12px 18px; border: none;
+      border-radius: 25px; text-decoration: none;
+      font-size: 15px; transition: background 0.3s;
+    }
+    .btn:hover { background: #2e7d32; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Добро пожаловать в Mersin Healing 🌿</h1>
+    <div class="lang-switch">
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </header>
+
+  <div class="hero"></div>
+
+  <div class="content">
+    <div id="ru">
+      <p>Минеральные и термальные источники Анатолии известны с времён Римской империи.</p>
+      <p>Наши программы помогают при проблемах с суставами, лишним весом, ЖКТ и псориазе.</p>
+      <p>Выберите направление ниже 👇</p>
+    </div>
+    <div id="en" class="hidden">
+      <p>Mineral and thermal springs of Anatolia have been known since Roman times.</p>
+      <p>Our programs support recovery for joints, weight management, digestion, and psoriasis.</p>
+      <p>Select your focus below 👇</p>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <a href="/joints" class="btn" id="btn-joints">🦵 Суставы</a>
+    <a href="/weight" class="btn" id="btn-weight">⚖️ Вес</a>
+    <a href="/digestion" class="btn" id="btn-digestion">🩺 ЖКТ</a>
+    <a href="/psoriasis" class="btn" id="btn-psoriasis">🌿 Псориаз</a>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      if(lang === 'ru') {
+        document.getElementById('title').innerText = "Добро пожаловать в Mersin Healing 🌿";
+        document.getElementById('ru').classList.remove('hidden');
+        document.getElementById('en').classList.add('hidden');
+        document.getElementById('btn-joints').innerText = "🦵 Суставы";
+        document.getElementById('btn-weight').innerText = "⚖️ Вес";
+        document.getElementById('btn-digestion').innerText = "🩺 ЖКТ";
+        document.getElementById('btn-psoriasis').innerText = "🌿 Псориаз";
+      } else {
+        document.getElementById('title').innerText = "Welcome to Mersin Healing 🌿";
+        document.getElementById('en').classList.remove('hidden');
+        document.getElementById('ru').classList.add('hidden');
+        document.getElementById('btn-joints').innerText = "🦵 Joints";
+        document.getElementById('btn-weight').innerText = "⚖️ Weight";
+        document.getElementById('btn-digestion').innerText = "🩺 Digestion";
+        document.getElementById('btn-psoriasis').innerText = "🌿 Psoriasis";
+      }
+    }
+  </script>
+</body>
+</html>
