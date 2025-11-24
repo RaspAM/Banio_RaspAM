@@ -17,11 +17,11 @@
     }
 
     header {
-      background: rgba(46, 125, 50, 0.85); /* зелёная шапка с прозрачностью */
-      color: white;
-      padding: 25px 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
+  /* background убран */
+  color: #0d47a1; /* тёмно-синий текст */
+  padding: 25px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
     header h1 { margin: 0; font-size: 1.6em; }
 
     .lang-switch { margin-top: 10px; }
@@ -36,12 +36,14 @@
     }
 
     .content {
-      background-color: rgba(0,0,0,0.5); /* затемнение для читаемости текста */
-      padding: 20px;
-      max-width: 600px;
-      margin: 40px auto;
-      line-height: 1.6;
-      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.7); /* светлый полупрозрачный фон */
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  line-height: 1.6;
+  border-radius: 10px;
+  font-weight: bold;             /* жирный текст */
+  color: #FFD700;
     }
 
     .buttons {
@@ -65,7 +67,7 @@
 </head>
 <body>
   <header>
-    <h1 id="title">Добро пожаловать в Mersin Healing 🌿</h1>
+    <h1 id="title">Добро пожаловать!  Оздоравление в Мерсине  🌿</h1>
     <div class="lang-switch">
       <button class="lang-btn" onclick="setLang('ru')">RU</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -115,4 +117,5 @@
   </script>
 </body>
 </html>
+
 
