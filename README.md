@@ -1,6 +1,6 @@
 # Mersin Healing Web App
 
-🌿 Добро пожаловать в **Mersin Healing** — оздоровительные программы на основе минеральных и термальных вод Турции.  
+🌿 Оздоровительные и лечебные программы на основе минеральных и термальных вод Турции, методов баньйо-терапии Залманова, контроля дыхания Бутейко, духовные практики.  
 Этот репозиторий содержит стартовую страницу (Web App) для Telegram‑бота [@MersinHealing_Bot](https://t.me/MersinHealing_Bot).
 
 ## 📌 О проекте
@@ -18,7 +18,7 @@
 
 # Mersin Healing Web App (English)
 
-🌿 Welcome to **Mersin Healing** — wellness programs based on mineral and thermal waters of Turkey.  
+🌿 Wellness and recreation programs based on Turkish mineral and thermal waters, Zalmanov's banya therapy methods, Buteyko breathing control in Turkey.  
 This repository hosts the landing page (Web App) for the Telegram bot [@MersinHealing_Bot](https://t.me/MersinHealing_Bot).
 
 ## 📌 About
