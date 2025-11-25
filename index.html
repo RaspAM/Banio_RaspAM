@@ -8,7 +8,7 @@
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0; padding: 0;
-      background-image: url('banio_seaV1.jpg'); /* твой файл с лесом, городом, морем и небом */
+      background-image: url('banio_seaV1.jpg'); /* море город горы небо */
       background-size: cover;       /* растягивает фото на весь экран */
       background-position: center;  /* центрирует */
       background-attachment: fixed; /* фон остаётся при прокрутке */
@@ -73,26 +73,26 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1 id="title">  🌿 Востановите здоровье в Турции  🌿</h1>
-    <div class="lang-switch">
-      <button class="lang-btn" onclick="setLang('ru')">RU</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
-    </div>
-  </header>
-
-  <div class="content">
-    <div id="ru">
-      <p>Целебные инеральные и термальные воды Анатолии известны с времён Римской империи.</p>
-      <p>Наши программы помогают при проблемах с суставами (артриты), лишним весом, ЖКТ и псориазе.</p>
-      <p>Выберите направление ниже 👇</p>
-    </div>
-    <div id="en" class="hidden">
-      <p>The healing mineral and thermal waters of Anatolia have been known since the time of the Roman Empire..</p>
-      <p>Our programs support recovery for joints (arthritis) , get rid of obesity naturally, digestion and psoriasis.</p>
-      <p>Select your focus below 👇</p>
-    </div>
+ <header>
+  <h1 id="title">🌿 Восстановите здоровье на средиземноморском побережье Турции минеральные и термальные источники Анатолии 🌿</h1>
+  <div class="lang-switch">
+    <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
   </div>
+</header>
+
+<div class="content">
+  <div id="ru">
+    <p>Целебными водами Анатолии лечились Римляне.</p>
+    <p>Индивидуальные программы помогут при проблемах с суставами (артриты), лишним весом, печенью и поджелудочной, ЖКТ (желудок, кишечник) и псориазе.</p>
+    <p>Выберите кнопку ниже для информации 👇</p>
+  </div>
+  <div id="en" class="hidden">
+    <p>Mineral waters of Anatolia were used by Romans for healing.</p>
+    <p>Our individual programs support recovery for joints (arthritis), weight, liver and pancreas, digestion and psoriasis.</p>
+    <p>Select a button below for details 👇</p>
+  </div>
+</div>
 
   <div class="buttons">
     <a href="/joints" class="btn" id="btn-joints">🦵 Суставы</a>
@@ -101,29 +101,30 @@
     <a href="/psoriasis" class="btn" id="btn-psoriasis">🌿 Псориаз</a>
   </div>
 
-  <script>
-    function setLang(lang) {
-      if(lang === 'ru') {
-        document.getElementById('title').innerText = "Добро пожаловать в Mersin Healing 🌿";
-        document.getElementById('ru').classList.remove('hidden');
-        document.getElementById('en').classList.add('hidden');
-        document.getElementById('btn-joints').innerText = "🦵 Суставы";
-        document.getElementById('btn-weight').innerText = "⚖️ Вес";
-        document.getElementById('btn-digestion').innerText = "🩺 ЖКТ";
-        document.getElementById('btn-psoriasis').innerText = "🌿 Псориаз";
-      } else {
-        document.getElementById('title').innerText = "Welcome to Mersin Healing 🌿";
-        document.getElementById('en').classList.remove('hidden');
-        document.getElementById('ru').classList.add('hidden');
-        document.getElementById('btn-joints').innerText = "🦵 Joints";
-        document.getElementById('btn-weight').innerText = "⚖️ Weight";
-        document.getElementById('btn-digestion').innerText = "🩺 Digestion";
-        document.getElementById('btn-psoriasis').innerText = "🌿 Psoriasis";
-      }
+ <script>
+  function setLang(lang) {
+    if(lang === 'ru') {
+      document.getElementById('title').innerText = "🌿 Восстановите здоровье на средиземноморском побережье Турции минеральные и термальные источники Анатолии 🌿";
+      document.getElementById('ru').classList.remove('hidden');
+      document.getElementById('en').classList.add('hidden');
+      document.getElementById('btn-joints').innerText = "🦵 Суставы";
+      document.getElementById('btn-weight').innerText = "⚖️ Вес";
+      document.getElementById('btn-digestion').innerText = "🩺 ЖКТ";
+      document.getElementById('btn-psoriasis').innerText = "🌿 Псориаз";
+    } else {
+      document.getElementById('title').innerText = "🌿 Recover your health on the Mediterranean coast of Turkey with the mineral and thermal springs of Anatolia 🌿";
+      document.getElementById('en').classList.remove('hidden');
+      document.getElementById('ru').classList.add('hidden');
+      document.getElementById('btn-joints').innerText = "🦵 Joints";
+      document.getElementById('btn-weight').innerText = "⚖️ Weight";
+      document.getElementById('btn-digestion').innerText = "🩺 Digestion";
+      document.getElementById('btn-psoriasis').innerText = "🌿 Psoriasis";
     }
-  </script>
+  }
+</script>
 </body>
 </html>
+
 
 
 
