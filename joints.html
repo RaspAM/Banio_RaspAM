@@ -108,7 +108,16 @@
           by different faiths — creates conditions for true healing.
         </p>
       </div>
-
+        <script>
+        window.onload = function() {
+        const tgLang = Telegram.WebApp.initDataUnsafe?.user?.language_code;
+        if (tgLang === 'en') {
+        setLang('en');
+          } else {
+        setLang('ru');
+          }
+        }
+        </script>
       <a href="https://mersinhealing.com/booking" class="btn"
         >📅 Забронировать / Book</a
       >
@@ -119,3 +128,4 @@
     </div>
   </body>
 </html>
+
