@@ -57,7 +57,7 @@
         background: transparent;
         padding: 10px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
       }
       .btn {
         background: rgba(67, 160, 71, 0.85);
@@ -119,7 +119,7 @@
       function setLang(lang) {
         if (lang === "ru") {
           document.getElementById("title").innerHTML =
-            "🌿 Восстановите здоровье на средиземноморском побережье Турции 🌿 <br> Минеральные и термальные источники Анатолии";
+            "🌿 Восстановить здоровье на средиземноморском побережье Турции 🌿 <br> Минеральные и термальные источники Анатолии";
           document.getElementById("ru").classList.remove("hidden");
           document.getElementById("en").classList.add("hidden");
           document.getElementById("btn-joints").innerText = "🦵 Суставы";
@@ -140,6 +140,7 @@
     </script>
   </body>
 </html>
+
 
 
 
