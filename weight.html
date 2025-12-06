@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>⚖️ Вес — путь к балансу</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="inner.css">
   <style>
   body {
     font-family: "Segoe UI", Arial;
@@ -19,20 +20,20 @@
     text-shadow: 1px 1px 3px #fff; /* белая тень */
   }
   .btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 15px;
-    background: #2e7d32;
-    color: #fff;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 2.5vw; /* кнопки оставляем адаптивными */
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background: #2e7d32 !important; /* фиксируем цвет */
+      color: #fff;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 2.5vw;
+      filter: none; /* отключаем влияние brightness */
+      position: relative; /* изолируем от фильтра */
+      z-index: 10;        /* поднимаем над фоном */
   }
   .btn:hover {
-    background: #1b5e20;
-  }
-  .hidden {
-    display: none;
+    background: #1b5e20 !important; /* фиксируем цвет при наведении */
   }
 
   /* Адаптация для телефонов */
@@ -111,18 +112,15 @@
           In Mersin we apply a holistic approach: nutrition, movement,
           breathing, and climatotherapy.
         </p>
-      </div>
-
-      <a href="https://raspam.github.io/Mersin-Healing/#contacts" class="btn"
-        >📞 Контакты📧 / Book</a
-      >
-      <a href="https://raspam.github.io/Mersin-Healing/" class="btn"
-        >🏠 Главный сайт / Main site</a
-      >
-      <a href="index.html" class="btn">⬅️ Назад / Back</a>
-    </div>
+       <!-- Кнопки -->
+   <div class="buttons">
+  <a href="https://raspam.github.io/Mersin-Healing/#contacts" class="btn">📞 Контакты</a>
+  <a href="https://raspam.github.io/Mersin-Healing/" class="btn">🏠 Главный сайт / Main site</a>
+  <a href="main.html" class="btn">⬅️ Назад / Back</a>
+</div>
   </body>
 </html>
+
 
 
 
