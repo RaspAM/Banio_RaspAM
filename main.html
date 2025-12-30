@@ -19,7 +19,7 @@
 
       header {
         color: #1d3377dc;
-        padding: 25px 20px;
+        padding: 22px 18px; / iso 25px 20px
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       }
       header h1 {
@@ -51,20 +51,41 @@
   background: transparent;
 }
 
+.buttons {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;          /* авто-перенос кнопок */
+  justify-content: center;  /* центрирование всех кнопок */
+  gap: 12px;                /* расстояние между кнопками */
+  background: transparent;
+}
+
 .btn {
-  background: rgba(255, 255, 255, 0.25); /* полупрозрачный */
-  color: #1d3377dc;
+  display: inline-flex;         /* гибкое содержимое */
+  justify-content: center;      /* центрирование текста по горизонтали */
+  align-items: center;          /* центрирование по вертикали */
+  text-align: center;           /* перенос текста внутри */
+  white-space: normal;          /* разрешить перенос строк */
+  word-wrap: break-word;        /* перенос длинных слов */
+  
   padding: 12px 20px;
+  max-width: 200px;             /* кнопка сама регулирует ширину */
+  min-width: 120px;             /* но не становится слишком узкой */
+
+  background: rgba(255, 255, 255, 0.25); /* полупрозрачная */
+  color: #1d3377dc;
   border: none;
   border-radius: 25px;
-  text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  backdrop-filter: blur(4px); /* лёгкое размытие фона */
+
+  backdrop-filter: blur(4px);   /* эффект стекла */
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35); /* тень справа и снизу */
+
   transition: 0.3s ease;
-  text-align: center; /* перенос текста внутри кнопки */
-  max-width: 45%;     /* чтобы кнопки красиво переносились */
 }
 
 .btn:hover {
@@ -108,6 +129,7 @@
     </div>
   </body>
 </html>
+
 
 
 
