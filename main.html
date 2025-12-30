@@ -39,48 +39,27 @@
 }
       }
 
-      .buttons {
+    .buttons {
   position: fixed;
   bottom: 0;
   width: 100%;
   padding: 12px;
   display: flex;
-  flex-wrap: wrap;        /* авто-перенос кнопок */
-  justify-content: center; /* центрирование */
-  gap: 12px;               /* расстояние между кнопками */
+  justify-content: center;   /* кнопки в линию по центру */
+  flex-wrap: wrap;           /* если экран узкий — перенос */
+  gap: 12px;
   background: transparent;
 }
 
-..btn {
-  display: inline-flex;         /* строчный элемент + flex */
-  justify-content: center;      /* центр текста */
+.btn {
+  display: inline-flex;       /* строчный элемент + flex */
+  justify-content: center;    /* центр текста */
   align-items: center;
-  text-align: center;
-  white-space: normal;          /* перенос текста */
+  text-align: center;         /* перенос текста */
+  white-space: normal;        /* разрешить перенос */
   word-wrap: break-word;
 
   padding: 12px 20px;
-
-  background: rgba(255, 255, 255, 0.25);
-  color: #1d3377dc;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: bold;
-
-  backdrop-filter: blur(4px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35);
-
-  transition: 0.3s ease;
-
-  /* КЛЮЧЕВОЕ ИЗМЕНЕНИЕ */
-  max-width: none;              /* кнопки больше НЕ ограничены */
-  min-width: auto;              /* ширина подстраивается под текст */
-}
-
-  padding: 12px 20px;
-  max-width: 200px;             /* кнопка сама регулирует ширину */
-  min-width: 120px;             /* но не становится слишком узкой */
 
   background: rgba(255, 255, 255, 0.25); /* полупрозрачная */
   color: #1d3377dc;
@@ -88,11 +67,23 @@
   border-radius: 25px;
   font-size: 16px;
   font-weight: bold;
+  text-decoration: none;      /* УБРАТЬ подчёркивание */
 
-  backdrop-filter: blur(4px);   /* эффект стекла */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35); /* тень справа и снизу */
+  backdrop-filter: blur(4px); /* эффект стекла */
+
+  /* ТЕНЬ СНИЗУ И СПРАВА твоим цветом */
+  box-shadow: 4px 4px 10px #0c89e4e8;
 
   transition: 0.3s ease;
+
+  /* кнопка сама регулирует ширину */
+  max-width: none;
+  min-width: auto;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 6px 6px 14px #0c89e4e8;
 }
 
 .btn:hover {
@@ -136,6 +127,7 @@
     </div>
   </body>
 </html>
+
 
 
 
