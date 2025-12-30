@@ -34,35 +34,43 @@
       line-height: 1.2; ?ISO 1,6
       font-weight: bold;
       font-size: 1.4em;
-      color: #1d3377dc;
+      color: #1a0733e8;
       text-align: center; /* ВЫРАВНИВАНИЕ КАК У h1 */
 }
       }
 
       .buttons {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background: transparent;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-      }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;        /* авто-перенос кнопок */
+  justify-content: center; /* центрирование */
+  gap: 12px;               /* расстояние между кнопками */
+  background: transparent;
+}
 
-      .btn {
-        background: #95dcefca;
-        color: #fbfccde8;
-        padding: 12px 18px;
-        border: none;
-        border-radius: 25px;
-        text-decoration: none;
-        font-size: 15px;
-        transition: background 0.3s;
-      }
-      .btn:hover {
-        background: #2490f6dc;
-      }
+.btn {
+  background: rgba(255, 255, 255, 0.25); /* полупрозрачный */
+  color: #1d3377dc;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  backdrop-filter: blur(4px); /* лёгкое размытие фона */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35); /* тень справа и снизу */
+  transition: 0.3s ease;
+  text-align: center; /* перенос текста внутри кнопки */
+  max-width: 45%;     /* чтобы кнопки красиво переносились */
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.45);
+}
     </style>
   </head>
 
@@ -100,6 +108,7 @@
     </div>
   </body>
 </html>
+
 
 
 
