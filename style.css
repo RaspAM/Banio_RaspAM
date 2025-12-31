@@ -28,7 +28,7 @@ header h1 {
   line-height: 1.4;
   font-weight: bold;
   font-size: 1.4em;
-  color: #266ee2dc; /ISO #1a0733e8;
+  color: #0a2756dc; /ISO #1a0733e8;
   text-align: center;
   padding-bottom: 80px; /*ISO 140 место под кнопки */
 }
@@ -52,7 +52,7 @@ header h1 {
 .hero-content {
   position: relative;
   z-index: 1;
-  color: #1a0733e8;
+  color: #0a2756dc; /ISO #1a0733e8
   font-size: 1.4em;
   font-weight: bold;
   line-height: 1.45;
@@ -150,6 +150,7 @@ header h1 {
   }
 
   
+
 
 
 
