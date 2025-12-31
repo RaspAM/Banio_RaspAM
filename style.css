@@ -59,23 +59,36 @@ header h1 {
   padding: 20px;
 }
 /* === ЕДИНЫЙ СТИЛЬ КНОПОК ДЛЯ ВСЕХ СТРАНИЦ === */
+/* === ЕДИНЫЙ СТИЛЬ КНОПОК ДЛЯ ВСЕХ СТРАНИЦ === */
 .buttons {
   position: static;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 12px;
+
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;   /* ← ГАРАНТИРОВАННО ПО ЦЕНТРУ */
+  align-items: center;
+
   gap: 12px;
+  width: 100%;               /* ← чтобы центрирование работало всегда */
   background: transparent;
+
+  text-align: center;        /* ← защита от родительского text-align */
+}
+
+.buttons a,
+.buttons .btn {
+  margin-left: auto;         /* ← центрирование независимо от контейнера */
+  margin-right: auto;
+  text-align: center !important;
 }
 
 .btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 
   padding: 12px 20px;
   background: rgba(255, 255, 255, 0.25);
@@ -137,6 +150,7 @@ header h1 {
   }
 
   
+
 
 
 
