@@ -7,37 +7,59 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #fff;
+  color: #1a0733e8;
   text-align: center;
 }
-/* === ШАПКА === */
 header {
   color: #1d3377dc;
   padding: 22px 18px;
   box-shadow: none;
 }
+
 header h1 {
   margin: 0;
-   margin-bottom: 8px; / в место 10
+  margin-bottom: 8px;
   font-size: 1.6em;
 }
-
-/* === ОСНОВНОЙ ТЕКСТ === */
 .content {
-  padding: 6px; / ISO10 
+  padding: 10px;
   max-width: 600px;
-  margin-top: 10px; / iso margin: 10px auto;
+  margin: 10px auto;
   line-height: 1.4;
   font-weight: bold;
   font-size: 1.4em;
   color: #1a0733e8;
   text-align: center;
-  padding-bottom: 140px; /* место под кнопки */ ISO100
-
+  padding-bottom: 140px; /* место под кнопки */
 }
-/* === КНОПКИ === */
+.hero {
+  position: relative;
+  padding: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('foneMer.jpg') center/cover no-repeat;
+  filter: brightness(2.1);
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #1a0733e8;
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1.45;
+  padding: 20px;
+}
 .buttons {
-  position:  static;
+  position: static;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 12px;
@@ -47,113 +69,71 @@ header h1 {
   gap: 12px;
   background: transparent;
 }
+
+/* ЕДИНЫЙ СТИЛЬ КНОПОК */
 .btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  white-space: normal;
-  word-wrap: break-word;
+
   padding: 12px 20px;
   background: rgba(255, 255, 255, 0.25);
   color: #1d3377dc;
   border: none;
-  border-radius: 20px; /iso 25
+  border-radius: 20px;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
+
   backdrop-filter: blur(4px);
   box-shadow: 4px 4px 10px #0c89e4e8;
   transition: 0.3s ease;
-  max-width: none;
-  min-width: auto;
+
+  flex: 1 1 auto;
+  min-width: 140px;
+  max-width: 200px;
 }
+
 .btn:hover {
   background: rgba(255, 255, 255, 0.45);
   box-shadow: 6px 6px 14px #0c89e4e8;
 }
-/* === МОБИЛЬНАЯ АДАПТАЦИЯ === */
-@media (max-width: 600px) {
+  @media (max-width: 600px) {
 
- header h1 {
-    font-size: 1.1em;      /* было 1.6em → уменьшено на ~30% */
+  header h1 {
+    font-size: 1.1em;
     line-height: 1.25;
   }
 
   .content {
-     padding-bottom: 150px; /* больше места под кнопки */
-    font-size: 1.0em;      /* было 1.4em → уменьшено на ~30% */
+    padding-bottom: 150px;
+    font-size: 1.0em;
     line-height: 1.35;
     padding: 12px;
-    margin: 20px auto; / ISO 25
+    margin: 20px auto;
   }
 
   .hero-content {
-    font-size: 1.0em;      /* было 1.4em → уменьшено на ~30% */
+    font-size: 1.0em;
     line-height: 1.35;
     padding: 12px;
   }
-  .form-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 25px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-align: left;
-}
-
-.form-container h2 {
-  text-align: center;
-  color: #1d3377dc;
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-top: 12px;
-  font-weight: bold;
-  color: #1a0733e8;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1em;
-}
-
-.btn-submit {
-  width: 100%;
-  margin-top: 20px;
-  padding: 12px;
-  background: #2e7d32;
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.btn-submit:hover {
-  background: #1b5e20;
-}
 
   .btn {
-    font-size: 12px;       /* было 16px → уменьшено на 25–30% */
+    font-size: 12px;
     padding: 8px 12px;
     border-radius: 16px;
+    min-width: 110px;
+    max-width: 150px;
   }
+
   .buttons {
     padding: 8px;
     gap: 8px;
   }
 }
-  
+
 
 
 
