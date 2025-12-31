@@ -58,6 +58,7 @@ header h1 {
   line-height: 1.45;
   padding: 20px;
 }
+/* === ЕДИНЫЙ СТИЛЬ КНОПОК ДЛЯ ВСЕХ СТРАНИЦ === */
 .buttons {
   position: static;
   margin-top: 20px;
@@ -70,7 +71,6 @@ header h1 {
   background: transparent;
 }
 
-/* ЕДИНЫЙ СТИЛЬ КНОПОК */
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -99,6 +99,22 @@ header h1 {
   background: rgba(255, 255, 255, 0.45);
   box-shadow: 6px 6px 14px #0c89e4e8;
 }
+/* === АДАПТАЦИЯ === */
+@media (max-width: 600px) {
+  .btn {
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 16px;
+    min-width: 110px;
+    max-width: 150px;
+  }
+
+  .buttons {
+    padding: 8px;
+    gap: 8px;
+  }
+}
+
   @media (max-width: 600px) {
 
   header h1 {
@@ -120,19 +136,8 @@ header h1 {
     padding: 12px;
   }
 
-  .btn {
-    font-size: 12px;
-    padding: 8px 12px;
-    border-radius: 16px;
-    min-width: 110px;
-    max-width: 150px;
-  }
+  
 
-  .buttons {
-    padding: 8px;
-    gap: 8px;
-  }
-}
 
 
 
