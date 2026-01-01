@@ -7,7 +7,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #0a2756dc / ISO #1a0733e8;
+  color: #0a2756dc 
   text-align: center;
 }
 body.no-sea {
@@ -33,7 +33,7 @@ header h1 {
   line-height: 1.4;
   font-weight: bold;
   font-size: 1.4em;
-  color: #0a2756dc; /ISO #1a0733e8;
+  color: #0a2756dc; 
   text-align: center;
   padding-bottom: 80px; /*ISO 140 место под кнопки */
 }
@@ -57,7 +57,7 @@ header h1 {
 .hero-content {
   position: relative;
   z-index: 1;
-  color: #0a2756dc; /ISO #1a0733e8
+  color: #0a2756dc; 
   font-size: 1.4em;
   font-weight: bold;
   line-height: 1.45;
@@ -155,9 +155,9 @@ input, textarea, select {
 }
 /* === МАЛЕНЬКИЕ ПОЛЯ (возраст, вес, рост, талия) === */
 input.input-small {
-  width: 45px !important;
-  min-width: 45px !important;
-  max-width: 45px !important;
+  width: 50px !important;
+  min-width: 50px !important;
+  max-width: 50px !important;
   padding: 8px;
   text-align: center;
   border: 1px solid #b8b0a3 !important; /* вернуть границу */
@@ -211,6 +211,7 @@ input.input-small {
     padding: 12px;
   }
   
+
 
 
 
