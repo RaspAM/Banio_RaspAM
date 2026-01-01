@@ -59,7 +59,6 @@ header h1 {
   padding: 20px;
 }
 /* === ЕДИНЫЙ СТИЛЬ КНОПОК ДЛЯ ВСЕХ СТРАНИЦ === */
-/* === ЕДИНЫЙ СТИЛЬ КНОПОК ДЛЯ ВСЕХ СТРАНИЦ === */
 .buttons {
   position: static;
   margin-top: 20px;
@@ -121,6 +120,15 @@ header h1 {
   text-align: left;
 }
 
+/* Фон страницы анкеты */
+.form-body {
+  background: #f3e9d7; /* кофе с молоком */
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: left;
+}
+
 /* Контейнер формы */
 .form-container {
   max-width: 420px;
@@ -157,7 +165,12 @@ input, textarea, select {
   font-size: 15px;
 }
 
-/* Три поля в ряд (вес/рост/талия) */
+/* Маленькие поля (возраст, вес, рост, талия) */
+.input-small {
+  width: 90px; /* уменьшено в 4–5 раз */
+}
+
+/* Три поля в ряд */
 .triple-row {
   display: flex;
   gap: 10px;
@@ -190,21 +203,6 @@ input, textarea, select {
 .btn-submit:hover {
   background: #b89263;
 }
-/* === АДАПТАЦИЯ === */
-@media (max-width: 600px) {
-  .btn {
-    font-size: 12px;
-    padding: 8px 12px;
-    border-radius: 16px;
-    min-width: 110px;
-    max-width: 150px;
-  }
-
-  .buttons {
-    padding: 8px;
-    gap: 8px;
-  }
-}
 
   @media (max-width: 600px) {
 
@@ -228,6 +226,7 @@ input, textarea, select {
   }
 
   
+
 
 
 
