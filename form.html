@@ -14,43 +14,61 @@
 
     <form id="healingForm">
 
-      <label>Как к Вам обрашатся:</label>
-      <input type="text" name="name" required>
+      <label>Как к вам обращаться:</label>
+      <input type="text" name="name" placeholder="Имя и отчество / Имя и фамилия" required>
 
       <label>Ваш возраст:</label>
-      <input type="number" name="age" required>
+      <input type="text" name="age" placeholder="Возраст или год рождения" required>
 
-      <label>Что вас беспокоит ваши недуги - проблемы здоровья :</label>
-      <textarea name="problems" rows="3" required></textarea>
-
-      <label>Как долго вы этим страдаете:</label>
-      <input type="text" name="duration" required>
-
-      <label>Ваш Вес (кг):</label>
-      <input type="number" name="weight">
-
-      <label>Рост (см):</label>
-      <input type="number" name="height">
-
-      <label>Объем талии (см):</label>
-      <input type="number" name="waist">
-      <label>Сколько времени вы можете выделить на восстановление в Мерсине:</label>
-        <input type="text" name="healing_time" placeholder="Например: 7 дней, 2 недели, 1 месяц" required>
-      <label>Выберите предполагаемые даты заезда и отъезда:</label>
-      <div class="date-range">
-      <input type="date" name="arrival_date" required>
-      <input type="date" name="departure_date" required>
-      </div>
-      <label>Предпочтительный вид связи:</label>
-      <select name="contact_method" required>
-      <option value="Telegram">Telegram</option>
-      <option value="WhatsApp">WhatsApp</option>
-      <option value="Email">Email</option>
+      <label>Что вас беспокоит (выберите одно или несколько):</label>
+      <select name="problems" multiple size="4" required>
+        <option value="joints">Суставы</option>
+        <option value="liver">Печень и ЖКТ</option>
+        <option value="weight">Лишний вес</option>
+        <option value="skin">Проблемы с кожей</option>
       </select>
 
-    <label>Укажите номер или адрес для связи:</label>
-    <input type="text" name="contact_details" placeholder="Ваш номер или email" required>
-     
+      <label>Примечания (если нужно уточнить):</label>
+      <textarea name="problem_notes" rows="2"></textarea>
+
+      <label>Вес (кг):</label>
+      <input type="number" name="weight" maxlength="3" placeholder="000">
+
+      <label>Рост (см):</label>
+      <input type="number" name="height" maxlength="3" placeholder="000">
+
+      <label>Объём талии (см):</label>
+      <input type="number" name="waist" maxlength="3" placeholder="000">
+
+      <label>Тип проживания:</label>
+      <select name="accommodation" required>
+        <option value="mersin_apart">Мерсин — апартаменты</option>
+        <option value="bn_hotel">BN Hotel Thermal & Wellness ★★★★★</option>
+        <option value="ciftehan">Чифтехан</option>
+        <option value="al_si">Al-Si Ametis Thermal Hotel SPA</option>
+        <option value="four_star">4‑звёздочный отель</option>
+        <option value="mixed">Смешанный вариант</option>
+      </select>
+
+      <label>Предпочтительный способ связи:</label>
+      <select name="contact_method" required>
+        <option value="Telegram">Telegram</option>
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="Email">Email</option>
+      </select>
+
+      <label>Укажите номер или адрес для связи:</label>
+      <input type="text" name="contact_details" placeholder="Ваш номер или email" required>
+
+      <label>Сколько времени вы можете выделить на восстановление:</label>
+      <input type="text" name="healing_time" placeholder="Например: 7 дней, 2 недели, 1 месяц" required>
+
+      <label>Предполагаемые даты заезда и отъезда:</label>
+      <div class="date-range">
+        <input type="date" name="arrival_date" required>
+        <input type="date" name="departure_date" required>
+      </div>
+
       <button type="submit" class="btn-submit">Отправить заявку</button>
 
     </form>
@@ -59,5 +77,4 @@
   <script src="send.js"></script>
 
 </body>
-
 </html>
