@@ -111,47 +111,26 @@ header h1 {
   background: rgba(255, 255, 255, 0.45);
   box-shadow: 6px 6px 14px #0c89e4e8;
 }
-/* Фон страницы анкеты */
-.form-body {
-  background: #f3e9d7; /* кофе с молоком */
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  text-align: left;
-}
-/* Отключаем фон-картинку на анкете */
-body.form-body {
-  background-image: none !important;
-  background: #f3e9d7 !important;
-  text-align: left !important;
-}
-/* Фон страницы анкеты */
-.form-body {
-  background: #f3e9d7; /* кофе с молоком */
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  text-align: left;
-}
-
-/* Контейнер формы */
+/* === ФОН ТОЛЬКО У ФОРМЫ (кофе с молоком) === */
 .form-container {
   max-width: 420px;
   margin: 40px auto;
-  background: #fffdf8;
+  background: #f3e9d7; /* кофе с молоком */
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0,0,0,0.08);
 }
 
-/* Заголовок */
+
+/* === ЗАГОЛОВОК === */
 h2 {
   margin-bottom: 20px;
   color: #333;
   font-weight: 600;
 }
 
-/* Подписи */
+
+/* === ПОДПИСИ === */
 label {
   display: block;
   margin-top: 15px;
@@ -159,40 +138,37 @@ label {
   font-weight: 600;
   color: #444;
 }
-
-/* Поля */
+/* === ПОЛЯ ВВОДА (молочный фон, НЕ белый) === */
 input, textarea, select {
   width: 100%;
   padding: 10px;
   border: 1px solid #d8d2c8;
   border-radius: 6px;
-  background: #ffffff;
+  background: #f7f1e3; /* мягкий молочный */
   font-size: 15px;
 }
 
-/* Маленькие поля */
+/* === МАЛЕНЬКИЕ ПОЛЯ (возраст, вес, рост, талия) === */
 input.input-small {
   width: 90px !important;
   min-width: 90px !important;
   max-width: 90px !important;
 }
-/* Три поля в ряд */
+/* === ТРИ ПОЛЯ В РЯД === */
 .triple-row {
   display: flex;
   gap: 10px;
 }
-
 .triple-row div {
   flex: 0 0 auto;
 }
 
-/* Даты */
+/* === ДАТЫ === */
 .date-range {
   display: flex;
   gap: 10px;
 }
-
-/* Кнопка */
+/* === КНОПКА === */
 .btn-submit {
   margin-top: 25px;
   width: 100%;
@@ -205,18 +181,14 @@ input.input-small {
   cursor: pointer;
   transition: 0.2s;
 }
-
 .btn-submit:hover {
   background: #b89263;
 }
-
   @media (max-width: 600px) {
-
   header h1 {
     font-size: 1.1em;
     line-height: 1.25;
   }
-
   .content {
     padding-bottom: 150px;
     font-size: 1.0em;
@@ -224,14 +196,13 @@ input.input-small {
     padding: 12px;
     margin: 20px auto;
   }
-
   .hero-content {
     font-size: 1.0em;
     line-height: 1.35;
     padding: 12px;
   }
-
   
+
 
 
 
