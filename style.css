@@ -150,9 +150,12 @@ input, textarea, select {
 
 /* === МАЛЕНЬКИЕ ПОЛЯ (возраст, вес, рост, талия) === */
 input.input-small {
-  width: 90px !important;
-  min-width: 90px !important;
-  max-width: 90px !important;
+  input.input-small {
+  width: 45px !important;      /* было 90px → теперь в 2 раза меньше */
+  min-width: 45px !important;
+  max-width: 45px !important;
+  padding: 8px;
+  text-align: center;
 }
 /* === ТРИ ПОЛЯ В РЯД === */
 .triple-row {
@@ -202,6 +205,7 @@ input.input-small {
     padding: 12px;
   }
   
+
 
 
 
