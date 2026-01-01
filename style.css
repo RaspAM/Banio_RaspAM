@@ -154,13 +154,15 @@ input, textarea, select {
 }
 
 /* === МАЛЕНЬКИЕ ПОЛЯ (возраст, вес, рост, талия) === */
+/* === МАЛЕНЬКИЕ ПОЛЯ (возраст, вес, рост, талия) === */
 input.input-small {
-  input.input-small {
-  width: 45px !important;      /* было 90px → теперь в 2 раза меньше */
-  min-width: 45px !important;
-  max-width: 45px !important;
+  width: 40px !important;
+  min-width: 40px !important;
+  max-width: 40px !important;
   padding: 8px;
   text-align: center;
+  border: 1px solid #b8b0a3 !important; /* вернуть границу */
+  box-sizing: border-box; /* чтобы рамка не исчезала */
 }
 /* === ТРИ ПОЛЯ В РЯД === */
 .triple-row {
@@ -210,6 +212,7 @@ input.input-small {
     padding: 12px;
   }
   
+
 
 
 
