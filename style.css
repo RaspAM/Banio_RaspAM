@@ -193,6 +193,24 @@ input.input-small {
 .btn-submit:hover {
   background: #b89263;
 }
+.form-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(60, 60, 60, 0.9);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.form-message.visible {
+  opacity: 1;
+}
   @media (max-width: 600px) {
   header h1 {
     font-size: 1.1em;
@@ -211,6 +229,7 @@ input.input-small {
     padding: 12px;
   }
   
+
 
 
 
