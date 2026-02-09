@@ -5,10 +5,12 @@
   <title>Лечение и восстановление при подагре и артритах</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Подключаем единый стиль -->
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Выравнивание стиля под страницу "Снижение веса" */
+    /* Локальные настройки только для этой страницы */
+
     .page {
       max-width: 900px;
       margin: 0 auto;
@@ -27,6 +29,15 @@
       overflow-wrap: break-word;
     }
 
+    /* Кнопки — единый стиль, но выравнивание слева */
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-start;
+    }
+
     @media (max-width: 600px) {
       .page {
         padding: 16px;
@@ -36,8 +47,8 @@
   </style>
 </head>
 
+<body>
 <body class="no-sea">
-
 <header>
   <h1>Лечение и восстановление при подагре и артритах</h1>
 </header>
@@ -82,6 +93,7 @@
 
 </body>
 </html>
+
 
 
 
