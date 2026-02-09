@@ -24,6 +24,7 @@ header {
 header h1 {
   margin: 0;
   margin-bottom: 6px; /*-ISO-8*/
+  margin-left: 12px;
   font-size: 1.6em;
 }
 .content {
@@ -238,6 +239,7 @@ header h1 {
 }
 
   
+
 
 
 
