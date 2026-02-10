@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Календарь на 2026 год</title>
+ </head>
+<body>
+<style>
+  body {
+    font-family: sans-serif;
+    padding: 20px;
+    background: #f3e9dd; /* светлое топлёное молоко */
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a3f35;
+  }
+
+  /* Кнопки навигации */
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .nav-buttons a {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    background: #faf5ee; /* тёплое молоко */
+    border: 1px solid #e0d7c8;
+    border-radius: 8px;
+    color: #4a3f35;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    transition: 0.2s;
+  }
+
+  .nav-buttons a:hover {
+    background: #f0e7d8;
+  }
+
+  .year-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .month {
+    background: #faf5ee; /* тёплое молоко */
+    border: 1px solid #e8dfd2;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  }
+
+  .month h3 {
+    text-align: center;
+    margin: 0 0 10px;
+    color: #5a4c42;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  th {
+    text-align: center;
+    padding: 4px 0;
+    font-weight: bold;
+    color: #5a4c42;
+  }
+
+  td {
+    text-align: center;
+    padding: 6px 0;
+    border: 1px solid #eee;
+    cursor: pointer;
+    background: #ffffff;
+    transition: 0.2s;
+  }
+
+  td.busy {
+    background: #eae3da;
+    color: #9c8f85;
+  }
+
+  td.free:hover {
+    background: #e6ffe6;
+  }
+
+  /* Адаптация под мобильные устройства */
+  @media (max-width: 900px) {
+    .year-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .year-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav-buttons {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<!-- Кнопки навигации -->
+<div class="nav-buttons">
+  <a href="main.html">← Назад</a>
+  <a href="form.html">Отправить заявку →</a>
+</div>
+
+<h2>Календарь на 2026 год</h2>
+
+<div class="year-container" id="calendar"></div>
+
+<script>
+  let busyDates = JSON.parse(localStorage.getItem("busyDates2026")) || [];
+
+  const monthNames = [
+    "Январь","Февраль","Март","Апрель","Май","Июнь",
+    "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"
+  ];
+
+  const calendarContainer = document.getElementById("calendar");
+
+  function renderYear(year) {
+    for (let month = 0; month < 12; month++) {
+      const monthDiv = document.createElement("div");
+      monthDiv.className = "month";
+
+      const title = document.createElement("h3");
+      title.textContent = monthNames[month];
+      monthDiv.appendChild(title);
+
+      const table = document.createElement("table");
+
+      const weekDays = ["Пн","Вт","Ср","Чт","Пт","Сб","Вс"];
+      let headerRow = "<tr>";
+      weekDays.forEach(d => headerRow += `<th>${d}</th>`);
+      headerRow += "</tr>";
+      table.innerHTML = headerRow;
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      let row = "<tr>";
+      let dayOfWeek = (firstDay + 6) % 7;
+
+      for (let i = 0; i < dayOfWeek; i++) {
+        row += "<td></td>";
+      }
+
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dateStr = `${year}-${String(month+1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
+        const isBusy = busyDates.includes(dateStr);
+
+        row += `<td class="${isBusy ? 'busy' : 'free'}"
+                     onclick="toggleDate('${dateStr}', this)">
+                     ${day}
+                 </td>`;
+
+        dayOfWeek++;
+        if (dayOfWeek === 7) {
+          row += "</tr><tr>";
+          dayOfWeek = 0;
+        }
+      }
+
+      row += "</tr>";
+      table.innerHTML += row;
+
+      monthDiv.appendChild(table);
+      calendarContainer.appendChild(monthDiv);
+    }
+  }
+
+  function toggleDate(date, cell) {
+    if (busyDates.includes(date)) {
+      busyDates = busyDates.filter(d => d !== date);
+      cell.classList.remove("busy");
+      cell.classList.add("free");
+    } else {
+      busyDates.push(date);
+      cell.classList.remove("free");
+      cell.classList.add("busy");
+    }
+
+    localStorage.setItem("busyDates2026", JSON.stringify(busyDates));
+  }
+
+  renderYear(2026);
+</script>
